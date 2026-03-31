@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Food Cards</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family: Arial, Helvetica, sans-serif;
+
+            /* NEW BACKGROUND */
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+        }
+
+        /* Header */
+        .header{
+            background-color:#ff6b35;
+            color:white;
+            text-align:center;
+            padding:18px;
+            font-size:24px;
+            font-weight:bold;
+            letter-spacing:1px;
+        }
+
+        /* Container */
+        .container{
+            display:flex;
+            justify-content:center;
+            gap:30px;
+            padding:60px 20px;
+        }
+
+        /* Card */
+        .card{
+            background-color:white;
+            width:250px;
+            padding:20px;
+            border-radius:12px;
+            text-align:center;
+            box-shadow:0 8px 25px rgba(0,0,0,0.15);
+            transition:transform 0.3s;
+        }
+
+        /* Card hover effect */
+        .card:hover{
+            transform:translateY(-10px);
+        }
+
+        /* Image */
+        .card img{
+            width:150px;
+            height:180px;
+            border-radius:10px;
+        }
+
+        /* Food Name */
+        .card h3{
+            margin:15px 0 5px 0;
+        }
+
+        /* Description */
+        .card p{
+            margin:0;
+            color:gray;
+            font-size:14px;
+        }
+
+        /* Button */
+        .card button{
+            margin-top:15px;
+            padding:10px 18px;
+            background-color:#ff6b35;
+            color:white;
+            border:none;
+            border-radius:6px;
+            cursor:pointer;
+            font-weight:bold;
+        }
+
+        .card button:hover{
+            background-color:#e85a2a;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        UNITED TELUGU KITCHENS
+    </div>
+
+    <div class="container">
+
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHr4FiIslJFTrLxaoRgE1djF3rTfgBDS-kOw&s" alt="Pizza">
+            <h3>Pizza</h3>
+            <p>Cheesy and loaded with toppings</p>
+            <button>Order Now</button>
+        </div>
+
+        <div class="card">
+            <img src="https://www.foodandwine.com/thmb/XE8ubzwObCIgMw7qJ9CsqUZocNM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/MSG-Smash-Burger-FT-RECIPE0124-d9682401f3554ef683e24311abdf342b.jpg" alt="Burger">
+            <h3>Burger</h3>
+            <p>Juicy patty with fresh veggies</p>
+            <button>Order Now</button>
+        </div>
+
+        <div class="card">
+            <img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Mocha-Cake_EXPS_FT22_33916_ST_08_12_1.jpg" alt="Cake">
+            <h3>Cake</h3>
+            <p>Soft and creamy dessert delight</p>
+            <button>Order Now</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

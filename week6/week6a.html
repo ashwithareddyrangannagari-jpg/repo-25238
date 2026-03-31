@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My E-Commerce Store</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#f0f0f0;
+}
+
+
+.container{
+display:grid;
+grid-template-columns:220px 1fr;
+grid-template-areas:
+"header header"
+"sale sale"
+"sidebar products"
+"footer footer";
+gap:10px;
+padding:10px;
+}
+
+
+.header{
+grid-area:header;
+background:#3366cc;
+color:white;
+text-align:center;
+padding:20px;
+font-size:28px;
+}
+
+
+.sale{
+grid-area:sale;
+background:orange;
+text-align:center;
+padding:15px;
+font-weight:bold;
+}
+
+
+.sidebar{
+grid-area:sidebar;
+background:#d3d3d3;
+padding:20px;
+}
+
+.sidebar h3{
+margin-top:0;
+}
+
+.sidebar a{
+display:block;
+padding:8px;
+color:black;
+text-decoration:none;
+}
+
+.sidebar a:hover{
+background:#bbb;
+}
+
+.products{
+grid-area:products;
+}
+
+.section{
+display:none;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+
+/* Show selected category */
+.section:target{
+display:grid;
+}
+.card{
+background:white;
+padding:10px;
+text-align:center;
+border-radius:5px;
+box-shadow:0 2px 8px rgba(0,0,0,0.2);
+}
+
+
+.card img{
+width:100%;
+height:180px;
+object-fit:contain;
+background:white;
+}
+
+.price{
+color:green;
+font-weight:bold;
+}
+
+
+button{
+background:#3366cc;
+color:white;
+border:none;
+padding:8px 12px;
+margin-top:10px;
+cursor:pointer;
+}
+
+
+.footer{
+grid-area:footer;
+background:#222;
+color:white;
+text-align:center;
+padding:15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+My E-Commerce Store
+</div>
+
+<div class="sale">
+ Big Sale! Up to 50% Off 
+</div>
+
+<div class="sidebar">
+<h3>Categories</h3>
+
+<a href="#electronics">Electronics</a>
+<a href="#clothing">Clothing</a>
+<a href="#appliances">Home Appliances</a>
+<a href="#books">Books</a>
+
+</div>
+
+<div class="products">
+
+
+<div id="electronics" class="section">
+
+<div class="card">
+<img src="https://images.livemint.com/img/2024/07/21/600x338/SamsungGalaxyBook4Pro2_1721589785656_1721589810511.jpg">
+<h3>Laptop</h3>
+<p class="price">$899</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://image01-in.oneplus.net/media/202512/12/515f7b2e234f759c3f0117a06601222c.png?x-amz-process=image/format,webp/quality,Q_80">
+<h3>Mobile</h3>
+<p class="price">$499</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://media-ik.croma.com/prod/https://media.tatacroma.com/Croma%20Assets/Entertainment/Headphones%20and%20Earphones/Images/271047_0_yaama6.png?tr=w-600">
+<h3>Headphones</h3>
+<p class="price">$199</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://www.sony.co.in/microsite/where-to-buy/electronics/cyber-shot-compact-cameras/dsc-w810/images/mod-img.jpg">
+<h3>digi camera</h3>
+<p class="price">$149</p>
+<button>Add to Cart</button>
+</div>
+
+</div>
+
+
+<div id="clothing" class="section">
+
+<div class="card">
+<img src="https://vionna.in/wp-content/uploads/2021/08/Untitled-design-22.png">
+<h3>T-Shirt</h3>
+<p class="price">$29</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://cdn19.nnnow.com/web-images/large/styles/PZRO51V2BV8/1737444878449/1.jpg">
+<h3>Jeans</h3>
+<p class="price">$59</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://assets.myntassets.com/dpr_1.5,q_30,w_400,c_limit,fl_progressive/assets/images/2025/JULY/11/jyxyIrEx_0bca4b535dea4cab830ddf47d108984d.jpg">
+<h3>frocks</h3>
+<p class="price">$99</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtrSLRrRpqIaanWnK-fWASpnsh7OFx5I98LA&s">
+<h3>heels</h3>
+<p class="price">$79</p>
+<button>Add to Cart</button>
+</div>
+
+</div>
+
+
+<div id="appliances" class="section">
+
+<div class="card">
+<img src="https://www.electrolux.in/globalassets/electrolux-india/kitchen/refrigerators/eqe6879a-b/eqe6879a-b-fr-cl-1500x1500.png">
+<h3>Refrigerator</h3>
+<p class="price">$399</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsUj1HVfsoHzNPCdOHQBMGJ_03H9rThkYKfw&s">
+<h3>Air fryer</h3>
+<p class="price">$129</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://aeno.com/blog/wp-content/uploads/2024/11/RS3432_oven-01-hpr.png">
+<h3>Microwave</h3>
+<p class="price">$199</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://images.favobliss.com/images/o-general-asgg18cnaa-b-1-5-ton-3-star-inverter-split-ac--4--htwczp.webp">
+<h3>Air Conditioner</h3>
+<p class="price">$799</p>
+<button>Add to Cart</button>
+</div>
+
+</div>
+
+
+<div id="books" class="section">
+
+<div class="card">
+<img src="https://cultivatewhatmatters.com/cdn/shop/articles/atomic-habits.jpg?v=1624827508">
+<h3>Atomic habits</h3>
+<p class="price">$39</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyaQo9bwT5MWWWnN5ZTG_NdUve06F4Y25lOw&s">
+<h3>do epic shit</h3>
+<p class="price">$29</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://www.iskconbooks.com/wp-content/uploads/2020/10/Eng-cvr-Bhagavad-gita.jpg">
+<h3>bhagavadgita</h3>
+<p class="price">$49</p>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://miro.medium.com/1*er1MuiRqfWUzeQsADNbiWg.jpeg">
+<h3>palace of illusions </h3>
+<p class="price">$59</p>
+<button>Add to Cart</button>
+</div>
+
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 My E-Commerce Store | All Rights Reserved
+</div>
+
+</div>
+</body>
+</html>
+

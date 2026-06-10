@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AV.S.U4CSE25233</title>
+    <style>
+        body {
+            font-family: Arial;
+            background:#4ac6e8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .card {
+            background:  #fecea8;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 15px;
+            background: #fecea8;
+            color: black;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ff847c;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>*** CHECK THE NUMBER ***</h1>
+
+<div class="container">
+
+    <div class="card">
+        <h3>Even or Odd</h3>
+        <p><b>Example:<br>2-Even<br>3-Odd</b></p>
+        <button onclick="checkEven()">Check</button>
+    </div>
+
+    <div class="card">
+        <h3>Prime Number</h3>
+        <p><b>Example:<br>7-Prime<br>10-Not a Prime</b></p>
+        <button onclick="checkPrime()">Check</button>
+    </div>
+
+    <div class="card">
+        <h3>Factorial</h3>
+        <p><b>Example:<br>4!=24</b></p>
+        <button onclick="findFactorial()">Calculate</button>
+    </div>
+
+    <div class="card">
+        <h3>Armstrong Number</h3>
+        <p><b>Example:<br>153=1^3+5^3+3^3</b></p>
+        <button onclick="checkArmstrong()">Check</button>
+    </div>
+
+</div>
+
+<script>
+
+    let num = parseInt(prompt("Enter a number:"));
+
+    function checkEven() {
+        if (num % 2 == 0)
+            alert("Even Number");
+        else
+            alert("Odd Number");
+    }
+
+    function checkPrime() {
+        let isPrime = true;
+
+        if (num <= 1) isPrime = false;
+        else {
+            for (let i = 2; i < num; i++) {
+                if (num % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+
+        if (isPrime)
+            alert("Prime Number");
+        else
+            alert("Not Prime");
+    }
+
+    function findFactorial() {
+        let fact = 1;
+
+        for (let i = 1; i <= num; i++) {
+            fact *= i;
+        }
+
+        alert("Factorial = " + fact);
+    }
+
+    function checkArmstrong() {
+        let sum = 0;
+        let temp = num;
+
+        while (temp > 0) {
+            let digit = temp % 10;
+            sum += digit ** 3;
+            temp = Math.floor(temp / 10);
+        }
+
+        if (sum == num)
+            alert("Armstrong Number");
+        else
+            alert("Not Armstrong");
+    }
+
+</script>
+
+</body>
+</html>
